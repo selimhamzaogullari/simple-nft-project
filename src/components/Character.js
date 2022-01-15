@@ -1,5 +1,4 @@
 import {Link} from "react-router-dom";
-import {GET_CHARACTER} from "../services";
 
 function Character({name, img, id}) {
   return (
