@@ -37,13 +37,15 @@ function Home() {
   }
 
   return (
-      <div className='grid lg:grid-cols-5 md:grid-cols-4 sm:grid-cols-3 gap-4'>
-        {allCharacters.length > 0 && allCharacters.map((c, i) =>
-            <Character name={c.name} img={c.image} id={c.id} key={'c' + i}/>
-        )
-        }
+      <>
+        <div className='grid lg:grid-cols-5 md:grid-cols-4 sm:grid-cols-3 gap-4'>
+          {allCharacters.length > 0 && allCharacters.map((c, i) =>
+              <Character name={c.name} img={c.image} id={c.id} key={'c' + i}/>
+          )
+          }
+        </div>
         {loading && <div>Loading...</div>}
-      </div>
+      </>
   )
 }
 

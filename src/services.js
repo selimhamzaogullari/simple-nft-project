@@ -14,7 +14,9 @@ const GET_CHARACTERS = gql`
 
 const GET_CHARACTER = gql`
   query GetRates ($id: ID!) {
-    character(id: $id) { id, name }
+    character(id: $id) { 
+    id, name, image, episode{name}, location{name} 
+    }
   }
 `
 
