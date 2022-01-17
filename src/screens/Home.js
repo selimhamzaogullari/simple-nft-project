@@ -2,6 +2,8 @@ import Character from "../components/Character";
 import {useQuery} from "@apollo/client";
 import {GET_CHARACTERS} from "../services";
 import {useEffect, useState} from "react";
+import Error from "../components/Error";
+import Loading from "../components/Loading";
 
 function Home() {
 
@@ -18,7 +20,7 @@ function Home() {
   }, []);
 
   // Work service
-  const { loading, data } = useQuery(GET_CHARACTERS, {
+  const { loading, error, data } = useQuery(GET_CHARACTERS, {
     variables: { page },
   });
 
@@ -26,6 +28,8 @@ function Home() {
   useEffect(() => {
     data !== undefined && setAllCharacters(oldArray => [...oldArray, ...data.characters.results]);
   }, [data])
+
+  if(error) return <Error />
 
   // Trigger scroll
   const scrollTrigger = _ => {
@@ -44,7 +48,7 @@ function Home() {
           )
           }
         </div>
-        {loading && <div>Loading...</div>}
+        {loading && <Loading />}
       </>
   )
 }

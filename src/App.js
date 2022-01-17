@@ -2,6 +2,7 @@ import './tailwind.css';
 import {Routes, Route, Link} from "react-router-dom";
 import Home from "./screens/Home";
 import Details from "./screens/Detail";
+import NotFound404 from "./screens/NotFound404";
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/details/:id" element={<Details />} />
+          <Route path="*" element={<NotFound404 />}/>
         </Routes>
       </div>
     </div>

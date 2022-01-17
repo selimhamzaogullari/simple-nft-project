@@ -2,14 +2,16 @@ import {Link, useParams} from "react-router-dom";
 import {useQuery} from "@apollo/client";
 import {GET_CHARACTER} from "../services";
 import BackIcon from '../images/back-icon.svg';
+import Error from "../components/Error";
+import Loading from "../components/Loading";
 
 function Details() {
   const {id} = useParams();
   const { loading, error, data } = useQuery(GET_CHARACTER, {
     variables: { id }
   });
-  if (loading) return <p>Loading...</p>;
-  if (error) return <p>Error :(</p>;
+  if (loading) return <Loading />;
+  if(error) return <Error />
   console.log(data)
   return (
       <>
