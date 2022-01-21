@@ -11,7 +11,10 @@ function Details() {
     variables: { id }
   });
   if (loading) return <Loading />;
-  if(error) return <Error />
+  if(error) {
+    console.log(error)
+    return <Error />
+  }
   console.log(data)
   return (
       <>

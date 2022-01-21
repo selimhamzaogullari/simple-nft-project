@@ -1,0 +1,14 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Home page after Loading snapshot 1`] = `
+Array [
+  <div
+    className="grid lg:grid-cols-5 md:grid-cols-4 sm:grid-cols-3 gap-4"
+  />,
+  <div
+    className="font-bold"
+  >
+    Loading...
+  </div>,
+]
+`;
