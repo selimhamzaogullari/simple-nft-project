@@ -1,7 +1,7 @@
 
-function Loading() {
+function Loading({fit}) {
   return (
-      <div className="font-bold">
+      <div className={`font-bold ${fit ? '' : 'h-screen'} dark:text-gray-300`}>
         Loading...
       </div>
   )

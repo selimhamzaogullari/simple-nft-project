@@ -48,7 +48,7 @@ function Home() {
           )
           }
         </div>
-        {loading && <Loading />}
+        {loading && <Loading fit={true} />}
       </>
   )
 }

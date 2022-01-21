@@ -1,7 +1,7 @@
 
 function NotFound404() {
   return (
-      <div className="bg-pink-500">
+      <div className="bg-pink-500 h-screen">
         <div className="w-9/12 m-auto py-16 min-h-screen flex items-center justify-center">
           <div className="bg-white shadow overflow-hidden sm:rounded-lg pb-8">
             <div className="border-t border-gray-200 text-center pt-8">

@@ -8,6 +8,8 @@ import {
   ApolloClient,
   ApolloProvider, InMemoryCache,
 } from "@apollo/client";
+import {Provider} from "react-redux";
+import {store} from "./store";
 
 const client = new ApolloClient({
   uri: 'https://rickandmortyapi.com/graphql',
@@ -17,7 +19,9 @@ const client = new ApolloClient({
 ReactDOM.render(
     <ApolloProvider client={client}>
       <BrowserRouter>
-        <App />
+        <Provider store={store}>
+          <App />
+        </Provider>
       </BrowserRouter>
     </ApolloProvider>,
   document.getElementById('root')
